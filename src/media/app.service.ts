@@ -1,10 +1,12 @@
 import { Injectable } from "@nestjs/common";
 import { VideoPreviewRequestDto } from "./video-preview-request.dto";
+import { PreviewService } from "./preview.service";
 
 @Injectable()
 export class AppService {
-    constructor(
-    ) { }
+    constructor(private previewService: PreviewService) { }
 
-    async execute(dto: VideoPreviewRequestDto) {}
+    async execute(filePath: string, dto: VideoPreviewRequestDto) {
+        this.previewService.transcode(filePath, dto)
+    }
 }

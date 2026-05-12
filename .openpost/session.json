@@ -1,0 +1,117 @@
+{
+  "tabs": [
+    {
+      "id": "1778616548082bcj3",
+      "tabKind": "request",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [
+        {
+          "key": "",
+          "value": "",
+          "enabled": true
+        }
+      ],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "VID_20260512_172123.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Downloads\\VID_20260512_172123.mp4",
+            "fileName": "VID_20260512_172123.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      },
+      "inheritAuth": false,
+      "inheritScripts": false,
+      "preRequestScript": "",
+      "testScript": "",
+      "testRules": [],
+      "setVariables": [],
+      "activeTab": "body",
+      "responseTab": "body",
+      "sourceRequestId": null,
+      "sourceCollectionId": null,
+      "sourceFolderPath": null,
+      "sourceScope": "local",
+      "proxyId": null,
+      "certificateConfig": null,
+      "inheritCertificate": false,
+      "response": {
+        "status": 201,
+        "statusText": "Created",
+        "headers": {
+          "connection": "keep-alive",
+          "content-length": "0",
+          "date": "Tue, 12 May 2026 21:19:22 GMT",
+          "keep-alive": "timeout=5",
+          "x-powered-by": "Express"
+        },
+        "body": "",
+        "time": 56,
+        "size": 0,
+        "actualRequest": {
+          "method": "POST",
+          "url": "http://localhost:3000/api/video",
+          "headers": {},
+          "body": "[form-data]",
+          "protocol": "HTTP/1.1",
+          "certificateNames": "System Trust Store"
+        },
+        "cookies": [],
+        "timingPhases": [
+          {
+            "name": "Environment",
+            "duration": 1
+          },
+          {
+            "name": "Auth",
+            "duration": 0
+          },
+          {
+            "name": "HTTP Request",
+            "duration": 56
+          },
+          {
+            "name": "Post-processing",
+            "duration": 0
+          }
+        ]
+      },
+      "error": null,
+      "loading": false,
+      "wsConnected": false,
+      "wsUrl": null,
+      "wsMessages": [],
+      "grpcConnected": false,
+      "grpcStreaming": false,
+      "grpcMessages": [],
+      "grpcConfig": null,
+      "groupId": null,
+      "mcpDescription": "",
+      "mcpInputSchema": "",
+      "collectionId": null,
+      "folderId": null,
+      "folderPath": null,
+      "editorScope": "local"
+    }
+  ],
+  "groups": [],
+  "activeTabId": "1778616548082bcj3",
+  "currentView": "requests",
+  "sidebarTab": "collections",
+  "sidebarCollapsed": true,
+  "responseTab": "body",
+  "layoutMode": "horizontal",
+  "splitRatio": 0.5,
+  "horizontalSplitRatio": 0.5,
+  "selectedMockServerId": null
+}

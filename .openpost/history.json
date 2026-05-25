@@ -1,349 +1,5 @@
 [
   {
-    "id": "1779649836459",
-    "timestamp": 1779649836459,
-    "request": {
-      "id": "1779649836238",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:10:36 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 186,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649839777",
-    "timestamp": 1779649839777,
-    "request": {
-      "id": "1779649839498",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:10:39 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 245,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649855957",
-    "timestamp": 1779649855957,
-    "request": {
-      "id": "1779649855704",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:10:55 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 217,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649864994",
-    "timestamp": 1779649864994,
-    "request": {
-      "id": "1779649864669",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:11:04 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 288,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649872653",
-    "timestamp": 1779649872653,
-    "request": {
-      "id": "1779649872412",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:11:12 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 206,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649874732",
-    "timestamp": 1779649874732,
-    "request": {
-      "id": "1779649874351",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:11:14 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 318,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649916052",
-    "timestamp": 1779649916052,
-    "request": {
-      "id": "1779649915791",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:11:56 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 225,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
-    "id": "1779649917145",
-    "timestamp": 1779649917145,
-    "request": {
-      "id": "1779649916732",
-      "name": "New Request",
-      "method": "POST",
-      "url": "http://localhost:3000/api/video",
-      "params": [],
-      "headers": [],
-      "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
-      },
-      "auth": {
-        "type": "none"
-      }
-    },
-    "response": {
-      "status": 201,
-      "statusText": "Created",
-      "headers": {
-        "connection": "keep-alive",
-        "content-length": "0",
-        "date": "Sun, 24 May 2026 19:11:57 GMT",
-        "keep-alive": "timeout=5",
-        "x-powered-by": "Express"
-      },
-      "body": "",
-      "time": 342,
-      "size": 0,
-      "cookies": []
-    }
-  },
-  {
     "id": "1779649922655",
     "timestamp": 1779649922655,
     "request": {
@@ -855,6 +511,350 @@
       },
       "body": "",
       "time": 232,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651137455",
+    "timestamp": 1779651137455,
+    "request": {
+      "id": "1779651137207",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:32:17 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 209,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651143816",
+    "timestamp": 1779651143816,
+    "request": {
+      "id": "1779651143558",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:32:23 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 219,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651171606",
+    "timestamp": 1779651171606,
+    "request": {
+      "id": "1779651171362",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:32:51 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 207,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651231953",
+    "timestamp": 1779651231953,
+    "request": {
+      "id": "1779651231671",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:33:51 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 243,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651319182",
+    "timestamp": 1779651319182,
+    "request": {
+      "id": "1779651318940",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:35:19 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 201,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651362592",
+    "timestamp": 1779651362592,
+    "request": {
+      "id": "1779651362305",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:36:02 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 252,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651508304",
+    "timestamp": 1779651508304,
+    "request": {
+      "id": "1779651508047",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:38:28 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 220,
+      "size": 0,
+      "cookies": []
+    }
+  },
+  {
+    "id": "1779651524529",
+    "timestamp": 1779651524529,
+    "request": {
+      "id": "1779651524249",
+      "name": "New Request",
+      "method": "POST",
+      "url": "http://localhost:3000/api/video",
+      "params": [],
+      "headers": [],
+      "body": {
+        "type": "form-data",
+        "formDataFiles": [
+          {
+            "key": "file",
+            "value": "Primeiro Trailer de um filme.mp4",
+            "enabled": true,
+            "fieldType": "file",
+            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
+            "fileName": "Primeiro Trailer de um filme.mp4"
+          }
+        ]
+      },
+      "auth": {
+        "type": "none"
+      }
+    },
+    "response": {
+      "status": 201,
+      "statusText": "Created",
+      "headers": {
+        "connection": "keep-alive",
+        "content-length": "0",
+        "date": "Sun, 24 May 2026 19:38:44 GMT",
+        "keep-alive": "timeout=5",
+        "x-powered-by": "Express"
+      },
+      "body": "",
+      "time": 234,
       "size": 0,
       "cookies": []
     }

@@ -54,8 +54,7 @@ export class PreviewService {
                 .outputOptions([
                     "-vf", [
                         "thumbnail=100," +
-                        "scale=320:180:force_original_aspect_ratio=decrease," +
-                        "pad=320:180:(ow-iw)/2:(oh-ih)/2:black," +
+                        "split[a][b];[b]scale=320:180,boxblur=20[bg];[a]scale=320:180:force_original_aspect_ratio=decrease[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2," +
 
                         "drawtext=font=Arial:text='%{eif\\:t/3600\\:d\\:2}\\:%{eif\\:(mod(t\\,3600))/60\\:d\\:2}\\:%{eif\\:mod(t\\,60)\\:d\\:2}':x=220:y=h-30:fontsize=22:fontcolor=white:borderw=1:bordercolor=black," +
 

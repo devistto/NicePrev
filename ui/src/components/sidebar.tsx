@@ -5,10 +5,34 @@ import { FaTiktok } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-export const SideBarCompoent = () => {
-    const [spacing, setSpacing] = useState(2);
-    const [radius, setRadius] = useState(0);
-    const [quality, setQuality] = useState(70);
+export type FieldNameType = "grid" | "spacing" | "ratio" | "backgroundColor" | "textColor" | "font" | "radius" | "timestamps" | "metadata" | "format" | "quality";
+
+type FunctionType = {
+    submitForm: (data: any) => void;
+    video: File | null
+}
+
+export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
+    const [settings, setSettings] = useState({
+        grid: "2x2",
+        spacing: 2,
+        ratio: "auto",
+        backgroundColor: "#2a006e",
+        textColor: "#d41818",
+        font: "",
+        radius: 0,
+        timestamps: true,
+        metadata: 1,
+        format: "png",
+        quality: 70
+    });
+
+    const updateSetting = (key: FieldNameType, value: any) => {
+        setSettings((prev) => ({
+            ...prev,
+            [key]: value
+        }))
+    }
 
     return (
         <div className="bg-zinc-800/70 w-[450px] h-full p-5 rounded-md flex flex-col text-white border border-zinc-800/80">
@@ -21,22 +45,22 @@ export const SideBarCompoent = () => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Esquema</h2>
                         <CustomDropdown data={[
-                            { name: "2x2 - 4 quadros", value: "2x2" },
-                            { name: "3x3 - 9 quadros", value: "3x3" },
-                            { name: "4x4 - 16 quadros", value: "4x4" },
-                            { name: "5x5 - 25 quadros", value: "5x5" }
-                        ]} />
+                            { fieldText: "2x2 - 4 quadros", fieldValue: "2x2", fieldName: "grid" },
+                            { fieldText: "3x3 - 9 quadros", fieldValue: "3x3", fieldName: "grid" },
+                            { fieldText: "4x4 - 16 quadros", fieldValue: "4x4", fieldName: "grid" },
+                            { fieldText: "5x5 - 25 quadros", fieldValue: "5x5", fieldName: "grid" }
+                        ]} defineValue={updateSetting} />
                     </div>
 
                     <div className="w-full flex flex-col justify-between">
                         <h2 className="">Espaçamento</h2>
                         <div className="flex gap-x-3 items-center">
                             <input type="range" min="0" max="10" step="1"
-                                value={spacing}
-                                onChange={(e) => setSpacing(Number(e.target.value))}
+                                value={settings.spacing}
+                                onChange={(e) => updateSetting("spacing", Number(e.target.value))}
                                 className="w-full"
                             />
-                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{spacing} <span className="text-zinc-500 ml-2">px</span></p>
+                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{settings.spacing} <span className="text-zinc-500 ml-2">px</span></p>
                         </div>
                     </div>
                 </div>
@@ -44,21 +68,29 @@ export const SideBarCompoent = () => {
                 <h3 className="mt-2 mb-3">Proporção</h3>
                 <div className="flex justify-between w-full gap-x-2">
 
-                    <div className="flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2">
+                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "auto" ? "bg-zinc-800/80" : ""}`}
+                        onClick={() => updateSetting("ratio", "auto")}
+                    >
                         <p>auto</p>
                     </div>
 
-                    <div className="flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2">
+                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "16:9" ? "bg-zinc-800/80" : ""}`}
+                        onClick={() => updateSetting("ratio", "16:9")}
+                    >
                         <FaYoutube className="text-red-700" />
                         <p className="">16:9</p>
                     </div>
 
-                    <div className="flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2">
+                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "4:3" ? "bg-zinc-800/80" : ""}`}
+                        onClick={() => updateSetting("ratio", "4:3")}
+                    >
                         <FaTiktok />
                         <p className="">4:3</p>
                     </div>
 
-                    <div className="flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2">
+                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "1:1" ? "bg-zinc-800/80" : ""}`}
+                        onClick={() => updateSetting("ratio", "1:1")}
+                    >
                         <GrInstagram className="text-pink-300" />
                         <p>1:1</p>
                     </div>
@@ -88,20 +120,20 @@ export const SideBarCompoent = () => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Fonte</h2>
                         <CustomDropdown data={[
-                            { name: "Padrão", value: "" },
-                            { name: "Ariaal", value: "Arial" }
-                        ]} />
+                            { fieldText: "Padrão", fieldValue: "", fieldName: "font" },
+                            { fieldText: "Ariaal", fieldValue: "Arial", fieldName: "font" }
+                        ]} defineValue={updateSetting} />
                     </div>
 
                     <div className="w-full flex flex-col justify-between">
                         <h2 className="">Curva</h2>
                         <div className="flex gap-x-3 items-center">
                             <input type="range" min="0" max="10" step="1"
-                                value={radius}
-                                onChange={(e) => setRadius(Number(e.target.value))}
+                                value={settings.radius}
+                                onChange={(e) => updateSetting("radius", Number(e.target.value))}
                                 className="w-full"
                             />
-                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{radius} <span className="text-zinc-500 ml-2">px</span></p>
+                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{settings.radius} <span className="text-zinc-500 ml-2">px</span></p>
                         </div>
                     </div>
                 </div>
@@ -110,18 +142,18 @@ export const SideBarCompoent = () => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Timestamps</h2>
                         <CustomDropdown data={[
-                            { name: "Todos", value: "true" },
-                            { name: "Nenhum", value: "false" }
-                        ]} />
+                            { fieldText: "Todos", fieldValue: true, fieldName: "timestamps" },
+                            { fieldText: "Nenhum", fieldValue: false, fieldName: "timestamps" }
+                        ]} defineValue={updateSetting} />
                     </div>
 
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Metadados</h2>
                         <CustomDropdown data={[
-                            { name: "Parcial", value: "1" },
-                            { name: "Todos", value: "2" },
-                            { name: "Nenhum", value: "3" }
-                        ]} />
+                            { fieldText: "Nenhum", fieldValue: 0, fieldName: "metadata" },
+                            { fieldText: "Parcial", fieldValue: 1, fieldName: "metadata" },
+                            { fieldText: "Todos", fieldValue: 2, fieldName: "metadata" },
+                        ]} defineValue={updateSetting} />
                     </div>
                 </div>
             </div>
@@ -135,29 +167,33 @@ export const SideBarCompoent = () => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Formato</h2>
                         <CustomDropdown data={[
-                            { name: "PNG", value: "png" },
-                            { name: "JPEG", value: "jpg" },
-                            { name: "WEBP", value: "webp" }
-                        ]} />
+                            { fieldText: "PNG", fieldValue: "png", fieldName: "format" },
+                            { fieldText: "JPEG", fieldValue: "jpg", fieldName: "format" },
+                            { fieldText: "WEBP", fieldValue: "webp", fieldName: "format" }
+                        ]} defineValue={updateSetting} />
                     </div>
 
                     <div className="w-full flex flex-col justify-between">
                         <h2 className="">Qualidade</h2>
                         <div className="flex gap-x-3 items-center">
                             <input type="range" min="50" max="100" step="1"
-                                value={quality}
-                                onChange={(e) => setQuality(Number(e.target.value))}
+                                value={settings.quality}
+                                onChange={(e) => updateSetting("quality", Number(e.target.value))}
                                 className="w-full"
                             />
-                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{quality} <span className="text-zinc-500 ml-2">%</span></p>
+                            <p className="px-3 w-20 flex justify-center py-1 text-xs border border-zinc-800">{settings.quality} <span className="text-zinc-500 ml-2">%</span></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button className="w-full rounded-md p-3 mt-5 text-xl bg-blue-800/60 flex justify-center items-center gap-x-3">
-            <MdOutlineFileDownload className="text-3xl"/>
-                Gerar 
+            <button onClick={
+                async () => await submitForm({
+                    ...settings, video
+                }) 
+            } className="w-full rounded-md p-3 mt-5 text-xl bg-blue-800/60 flex justify-center items-center gap-x-3 hover:opacity-70 cursor-pointer">
+                <MdOutlineFileDownload className="text-3xl" />
+                Gerar
             </button>
 
         </div >

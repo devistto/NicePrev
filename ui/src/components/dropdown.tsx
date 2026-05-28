@@ -1,16 +1,19 @@
 import { useState, useRef, useEffect } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import type { FieldNameType } from "./sidebar";
 
 type DataTypes = {
-    name: string;
-    value: string;
+    fieldName: FieldNameType;
+    fieldText: string;
+    fieldValue: string | boolean | number;
 }
 
 type Props = {
-    data: DataTypes[]
+    data: DataTypes[];
+    defineValue: (key: FieldNameType, value: any) => void
 }
 
-export const CustomDropdown = ({ data }: Props) => {
+export const CustomDropdown = ({ data, defineValue }: Props) => {
     const [open, setOpen] = useState(false);
     const [selected, setSelected] = useState(data[0]);
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -41,7 +44,7 @@ export const CustomDropdown = ({ data }: Props) => {
                 onClick={() => setOpen(!open)}
                 className="border border-zinc-800 h-10 flex items-center px-3 relative cursor-pointer bg-zinc-800/40"
             >
-                <span>{selected.name}</span>
+                <span>{selected.fieldText}</span>
 
                 <IoMdArrowDropdown
                     className={`absolute right-3 text-xl transition-transform ${open ? "rotate-180" : ""
@@ -52,15 +55,16 @@ export const CustomDropdown = ({ data }: Props) => {
             {open && (
                 <div className="absolute top-12 left-0 w-full border border-zinc-800 z-50">
                     {data.map((item) => (
-                        item.value !== selected.value && <div
-                            key={item.value}
+                        item.fieldValue !== selected.fieldValue && <div
+                            key={item.fieldText}
                             onClick={() => {
                                 setSelected(item);
+                                defineValue(item.fieldName, item.fieldValue)
                                 setOpen(false);
                             }}
                             className="px-3 h-10 flex items-center cursor-pointer hover:bg-zinc-700 bg-zinc-800"
                         >
-                            {item.name}
+                            {item.fieldText}
                         </div>
                     ))}
                 </div>

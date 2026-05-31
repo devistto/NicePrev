@@ -17,13 +17,13 @@ function App() {
     formData.append("backgroundColor", data.backgroundColor);
     formData.append("textColor", data.textColor);
     formData.append("font", data.font);
-    formData.append("format", data.format);
+    formData.append("outputFormat", data.outputFormat);
     formData.append("quality", String(data.quality));
     formData.append("radius", String(data.radius));
     formData.append("timestamps", String(data.timestamps));
     formData.append("metadata", String(data.metadata));
 
-    await fetch("http://localhost:3000/upload", {
+    await fetch("http://localhost:3000/api/video", {
       method: "POST",
       body: formData
     });

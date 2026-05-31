@@ -5,7 +5,7 @@ import { FaTiktok } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-export type FieldNameType = "grid" | "spacing" | "ratio" | "backgroundColor" | "textColor" | "font" | "radius" | "timestamps" | "metadata" | "format" | "quality";
+export type FieldNameType = "grid" | "spacing" | "ratio" | "backgroundColor" | "textColor" | "font" | "radius" | "timestamps" | "metadata" | "outputFormat" | "quality";
 
 type FunctionType = {
     submitForm: (data: any) => void;
@@ -16,14 +16,14 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
     const [settings, setSettings] = useState({
         grid: "2x2",
         spacing: 2,
-        ratio: "auto",
-        backgroundColor: "#2a006e",
-        textColor: "#d41818",
+        ratio: "16:9",
+        backgroundColor: "#000000",
+        textColor: "#FFFFFF",
         font: "",
         radius: 0,
         timestamps: true,
-        metadata: 1,
-        format: "png",
+        metadata: true,
+        outputFormat: "png",
         quality: 70
     });
 
@@ -55,7 +55,7 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
                     <div className="w-full flex flex-col justify-between">
                         <h2 className="">Espaçamento</h2>
                         <div className="flex gap-x-3 items-center">
-                            <input type="range" min="0" max="10" step="1"
+                            <input type="range" min="0" max="10" step="2"
                                 value={settings.spacing}
                                 onChange={(e) => updateSetting("spacing", Number(e.target.value))}
                                 className="w-full"
@@ -68,10 +68,10 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
                 <h3 className="mt-2 mb-3">Proporção</h3>
                 <div className="flex justify-between w-full gap-x-2">
 
-                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "auto" ? "bg-zinc-800/80" : ""}`}
-                        onClick={() => updateSetting("ratio", "auto")}
+                    <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "9:16" ? "bg-zinc-800/80" : ""}`}
+                        onClick={() => updateSetting("ratio", "9:16")}
                     >
-                        <p>auto</p>
+                        <p>9:16</p>
                     </div>
 
                     <div className={`flex border border-zinc-800 py-1 px-6 items-center justify-center gap-x-2 ${settings.ratio === "16:9" ? "bg-zinc-800/80" : ""}`}
@@ -103,14 +103,19 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
                 <h1 className="text-xl mt-3 flex"><p className="text-blue-200">2</p>. Estilo de imagem</h1>
 
                 <div className="mt-5 mb-3 flex w-full items-center">
-                    <p className="w-full">Cores de fundo e texto:</p>
+                    <p className="w-full">Cores de texto e fundo:</p>
                     <div className="w-full flex">
                         <input
                             type="color"
-                            className="h-7 w-full [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] "
+                            value={settings.textColor}
+                            onChange={(e) => updateSetting("textColor", e.target.value)}
+                            className="h-7 w-full [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)]"
                         />
+
                         <input
                             type="color"
+                            value={settings.backgroundColor}
+                            onChange={(e) => updateSetting("backgroundColor", e.target.value)}
                             className="h-7 w-full -ml-3 [clip-path:polygon(15%_0,100%_0,100%_100%,0_100%)]"
                         />
                     </div>
@@ -150,9 +155,8 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Metadados</h2>
                         <CustomDropdown data={[
-                            { fieldText: "Nenhum", fieldValue: 0, fieldName: "metadata" },
-                            { fieldText: "Parcial", fieldValue: 1, fieldName: "metadata" },
-                            { fieldText: "Todos", fieldValue: 2, fieldName: "metadata" },
+                            { fieldText: "Todos", fieldValue: true, fieldName: "metadata" },
+                            { fieldText: "Nenhum", fieldValue: false, fieldName: "metadata" },
                         ]} defineValue={updateSetting} />
                     </div>
                 </div>
@@ -167,9 +171,9 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
                     <div className="w-full flex flex-col">
                         <h2 className="mb-2">Formato</h2>
                         <CustomDropdown data={[
-                            { fieldText: "PNG", fieldValue: "png", fieldName: "format" },
-                            { fieldText: "JPEG", fieldValue: "jpg", fieldName: "format" },
-                            { fieldText: "WEBP", fieldValue: "webp", fieldName: "format" }
+                            { fieldText: "PNG", fieldValue: "png", fieldName: "outputFormat" },
+                            { fieldText: "JPEG", fieldValue: "jpg", fieldName: "outputFormat" },
+                            { fieldText: "WEBP", fieldValue: "webp", fieldName: "outputFormat" }
                         ]} defineValue={updateSetting} />
                     </div>
 
@@ -190,7 +194,7 @@ export const SideBarCompoent = ({ submitForm, video }: FunctionType) => {
             <button onClick={
                 async () => await submitForm({
                     ...settings, video
-                }) 
+                })
             } className="w-full rounded-md p-3 mt-5 text-xl bg-blue-800/60 flex justify-center items-center gap-x-3 hover:opacity-70 cursor-pointer">
                 <MdOutlineFileDownload className="text-3xl" />
                 Gerar

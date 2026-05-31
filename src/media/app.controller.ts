@@ -2,16 +2,19 @@ import { BadRequestException, Body, Controller, Post, UploadedFile, UseIntercept
 import { FileInterceptor } from '@nestjs/platform-express';
 import { multer } from 'src/processors/multer';
 import { AppService } from './app.service';
-import { VideoPreviewRequestDto } from './video-preview-request.dto';
+import { CustomPreviewDto } from './dto';
 
 @Controller("api")
 export class AppController {
     constructor(private mediaService: AppService) { }
 
     @Post("video")
-    @UseInterceptors(FileInterceptor("file", multer))
-    async handler(@UploadedFile() file: Express.Multer.File, @Body() dto: VideoPreviewRequestDto) {
-        if (!file) throw new BadRequestException("File is missing");
-        const output = await this.mediaService.execute(file.path, dto);
+    @UseInterceptors(FileInterceptor("video", multer))
+    async handler(
+        @UploadedFile() video: Express.Multer.File,
+        @Body() dto: CustomPreviewDto
+    ) {
+        if (!video?.path) throw new BadRequestException("File is missing");
+        const outputPath = await this.mediaService.execute(video.path, dto);
     }
 }

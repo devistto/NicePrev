@@ -1,7 +1,7 @@
 {
   "tabs": [
     {
-      "id": "1778616548082bcj3",
+      "id": "17800830934893tsn",
       "tabKind": "request",
       "name": "New Request",
       "method": "POST",
@@ -9,23 +9,18 @@
       "params": [],
       "headers": [
         {
-          "key": "",
-          "value": "",
+          "key": "Accept",
+          "value": "application/json",
+          "enabled": true
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json",
           "enabled": true
         }
       ],
       "body": {
-        "type": "form-data",
-        "formDataFiles": [
-          {
-            "key": "file",
-            "value": "Primeiro Trailer de um filme.mp4",
-            "enabled": true,
-            "fieldType": "file",
-            "filePath": "d:\\Documents\\Primeiro Trailer de um filme.mp4",
-            "fileName": "Primeiro Trailer de um filme.mp4"
-          }
-        ]
+        "type": "none"
       },
       "auth": {
         "type": "none"
@@ -36,7 +31,8 @@
       "testScript": "",
       "testRules": [],
       "setVariables": [],
-      "activeTab": "body",
+      "activeTab": "headers",
+      "responseTab": "body",
       "sourceRequestId": null,
       "sourceCollectionId": null,
       "sourceFolderPath": null,
@@ -44,66 +40,27 @@
       "proxyId": null,
       "certificateConfig": null,
       "inheritCertificate": false,
-      "response": {
-        "status": 201,
-        "statusText": "Created",
-        "headers": {
-          "connection": "keep-alive",
-          "content-length": "0",
-          "date": "Sun, 24 May 2026 19:38:44 GMT",
-          "keep-alive": "timeout=5",
-          "x-powered-by": "Express"
-        },
-        "body": "",
-        "time": 234,
-        "size": 0,
-        "actualRequest": {
-          "method": "POST",
-          "url": "http://localhost:3000/api/video",
-          "headers": {},
-          "body": "[form-data]",
-          "protocol": "HTTP/1.1",
-          "certificateNames": "System Trust Store"
-        },
-        "cookies": [],
-        "timingPhases": [
-          {
-            "name": "Environment",
-            "duration": 1
-          },
-          {
-            "name": "Auth",
-            "duration": 0
-          },
-          {
-            "name": "HTTP Request",
-            "duration": 234
-          },
-          {
-            "name": "Post-processing",
-            "duration": 0
-          }
-        ]
-      },
+      "response": null,
       "error": null,
       "loading": false,
       "wsConnected": false,
       "wsUrl": null,
       "wsMessages": [],
+      "grpcConnected": false,
+      "grpcStreaming": false,
+      "grpcMessages": [],
+      "grpcConfig": null,
       "groupId": null,
       "mcpDescription": "",
       "mcpInputSchema": "",
       "collectionId": null,
       "folderId": null,
       "folderPath": null,
-      "editorScope": "local",
-      "grpcConnected": false,
-      "grpcStreaming": false,
-      "responseTab": "body"
+      "editorScope": "local"
     }
   ],
   "groups": [],
-  "activeTabId": "1778616548082bcj3",
+  "activeTabId": "17800830934893tsn",
   "currentView": "requests",
   "sidebarTab": "collections",
   "sidebarCollapsed": true,
